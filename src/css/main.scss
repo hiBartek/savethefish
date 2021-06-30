@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,300&display=swap');
+*,::after,::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+   width: 100%;
+   height: 100vh;
+   min-height: 100%;
+   display: flex;
+   flex-direction: row;
+    background-image: url("../image/sea_background.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+
+    h1{
+       text-transform: uppercase;
+
+       a{
+         color: #5AA9E6;
+         text-decoration: none;
+       }
+    }
+}
+.speaker{
+   cursor: pointer;
+   color: #5AA9E6;
+   transform: scale(1.8);
+
+   transition: .2s ease;
+
+   &:hover{
+      transform: scale(1.7);
+      text-shadow: 5px 6px 12px rgba(90, 169, 230, 0.376);
+   }
+}
+
+.blurbg{
+   z-index: 98;
+   width: 100%;
+   min-height: 100%;
+   height: 100vh;
+   background: rgba(0, 0, 0, 0.7);
+   transition: 1s ease;
+
+   &.active{
+      background: rgba(0, 0, 0, 0.0);
+   }
+}
+
+// hi
+.hi{
+   z-index: 1000;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   padding: 20px;
+   width: 300px;
+   height: 250px;
+   background: rgba(255, 255, 255, 0.85);
+   border-radius: 8px;
+   box-shadow: 4px 6px 8px rgba(0, 0, 0, 0.123);
+   text-align: center;
+   transition: 1s ease;
+
+   &.active{
+      transform: translate(-50%,-500%);
+   }
+
+   .startgame{
+      height: 200px;
+   }
+
+   .maps{
+      margin-top: 50px;
+      width: 100%;
+      display: flex; justify-content: center; align-items: flex-start;
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 8px;
+      box-shadow: 4px 6px 8px rgba(0, 0, 0, 0.123);
+
+
+      .map{
+         cursor: pointer;
+         margin: 5px;
+         width: 50px;
+         height: 50px;
+
+         img{
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 4px;
+         }
+      }
+   }
+}
+
+//  stargamebtn
+.startgamebtn{
+   cursor: pointer;
+   z-index: 99;
+   display: block;
+   margin: 20px;
+   padding: 20px;
+   background: #5AA9E6;
+   border-radius: 50px;
+   color: #fff;
+   font-size: 20px;
+   transition: .2s ease;
+
+   &:hover{
+      transform: scale(.95);
+      box-shadow: 5px 6px 12px rgba(90, 169, 230, 0.376);
+   }
+}
+
+// score text
+.scoreBorder{
+   padding: 5px;
+   min-width: 50px;
+   z-index: 100;
+   position: absolute;
+   top: 50px;
+   left: 50%;
+   transform: translateX(-50%);
+   text-align: center;
+   font-size: 45px;
+   color: #fff;
+   font-family: 'Roboto', sans-serif;
+   background: rgba(0, 0, 0, 0.2);
+   border-radius: 10px;
+   display: none;
+}
+
+#heart{
+   display: none;
+   margin-left: 10px;
+   width: 60px;
+   height: 60px;
+   background-image: url(../image/heart.png);
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: contain;
+}
+
+// bags
+.bags{
+   cursor: pointer;
+   z-index: 5;
+   position: absolute;
+   width: 60px;
+   height: 60px;
+    animation: bagsDown 15s ease both;
+
+   img{
+      width:  100%;
+      height: 100%;
+      object-fit: contain;
+      animation: wave 10s ease both infinite;
+   }
+}
+
+// fish
+.fish{
+   cursor: pointer;
+   z-index: 80;
+   display: none;
+   position: absolute;
+   width: 60px;
+   height: 60px;
+   background-size: contain;
+   background-repeat: no-repeat;
+
+   img{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      animation: allFish 10s ease both infinite;
+   }
+}
+
+#fish1{
+   top: 10%;
+   left: 0;
+   animation: fish2 19s ease both infinite;
+}
+
+#fish2{
+   top: 20%;
+   right: 0;
+   animation: fish1 25s ease-in-out both infinite;
+}
+
+#fish3{
+   top: 30%;
+   right: 0;
+   animation: fish1 20s ease both infinite;
+}
+
+#fish4{
+   top: 40%;
+   left: 0;
+   animation: fish2 25s ease both infinite;
+}
+
+#fish5{
+   top: 50%;
+   right: 0;
+   animation: fish1 22s ease both infinite;
+}
+
+#rekin{
+   top: 60%;
+   right: 0;
+   width: 200px;
+   height: 100px;
+   animation: fish1 30s ease both infinite;
+}
+
+// wave
+@keyframes wave{
+    0%{
+       transform: rotate(0deg); 
+    }
+
+    25%{
+        transform: rotate(45deg); 
+     }
+
+     50%{
+        transform: rotate(0deg); 
+     }
+
+     75%{
+        transform: rotate(-45deg); 
+     }
+
+     100%{
+        transform: rotate(0deg); 
+     }
+}
+
+// bags down
+@keyframes bagsDown {
+   0%{
+      top: 0;
+   }
+   100%{
+      top: 97%;
+   }
+}
+
+@keyframes fish1{
+   0%{
+      transform: translateX(0%) rotateY(0deg);
+   }
+   50%{
+      transform: translateX(-95vw) rotateY(0deg);
+   }
+   55%{
+      transform: translate(-95vw) rotateY(180deg);
+   }
+   100%{
+      transform: translateX(0%) rotateY(180deg);
+   }
+}
+
+@keyframes fish2{
+   0%{
+      transform: translateX(0%) rotateY(180deg);
+   }
+   50%{
+      transform: translateX(95vw) rotateY(180deg);
+   }
+   51%{
+      transform: translateX(95vw) rotateY(0deg);
+   }
+   100%{
+      transform: translateX(0%) rotateY(0deg);
+   }
+}
+
+@keyframes allFish{
+   0%{
+      transform: rotate(0deg);
+   }
+   40%{
+      transform: rotate(5deg);
+   }
+   80%{
+      transform: rotate(-5deg);
+   }
+   100%{
+      transform: rotate(0deg);
+   }
+}
+
+
+@media screen and (max-width: 500px){
+   .scoreBorder{
+      font-size: 30px;
+   }
+
+   #heart{
+      height: auto;
+   }
+}

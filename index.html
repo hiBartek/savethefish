@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save the fish</title>
+    <link rel="shortcut icon" href="src/image/arrabal.png" type="image/x-icon">
+    <!-- style -->
+    <link rel="stylesheet" href="src/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- info -->
+    <meta property="og:title" content="Save The Fish"/>
+    <meta property="og:description" content="description"/>
+    <meta property="og:image" content="logo"/>
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
+    <meta property="og:type" content="website"/>
+</head>
+<body>
+    <!-- audio -->
+    <audio src="src/audio/musicGame.mp3" id="musicGame"></audio>
+
+    <!-- hi -->
+    <div class="blurbg"></div>
+    <div class="hi">
+        <div class="startgame">
+            <a target="_blank" href="https://asociacionarrabal.org"><img style="width: 50px; height: 50px;" src="src/image/arrabal.png" alt="arrabal"></a>
+            <h1><a href="#">Save the fish</a></h1>
+            <div class="startgamebtn">Play</div>
+            <div class="speaker"><i class="fas fa-volume-mute"></i></div>
+        </div>
+
+        <div class="maps">
+            <span class="map" id="map1"><img class="mapImg" src="src/image/sea_background.jpg" alt="background"></span>
+            <span class="map" id="map2"><img class="mapImg" src="src/image/sea_background2.jpg" alt="background"></span>
+            <span class="map" id="map3"><img class="mapImg" src="src/image/sea_background3.jpg" alt="background"></span>
+        </div>
+    </div>
+
+    <!-- scoreBorder -->
+    <div class="scoreBorder">
+        <div id="scoreText"></div>
+        <div id="heart"></div>
+    </div>
+
+    <!-- fish spawn -->
+    <div class="fish" id="fish1"><img src="src/image/ryba.png" alt="fish"></div>
+    <div class="fish" id="fish2"><img src="src/image/rybka.png" alt="fish"></div>
+    <div class="fish" id="fish3"><img src="src/image/meduska.png" alt="fish"></div>
+    <div class="fish" id="fish4"><img src="src/image/rybka2.png" alt="fish"></div>
+    <div class="fish" id="fish5"><img src="src/image/osmiorniczka.png" alt="fish"></div>
+    <div class="fish" id="rekin"><img src="src/image/rekin.png" alt="fish"></div>
+
+    <!-- script -->
+    <script src="src/js/function.js"></script>
+    <script src="src/js/game.js"></script>
+</body>
+</html>
