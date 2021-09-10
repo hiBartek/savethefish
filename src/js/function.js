@@ -4,13 +4,13 @@ const all_bags_img_l = all_bags_img.length; // ilosc przedmiotow
 
 function spawnBags(){
     if(live == true){
-        bags = document.createElement("DIV"); // tworzenie diva
+        bags = document.createElement("DIV"); // create div
         bags.innerHTML = '<img src="./src/image/' + all_bags_img[Math.floor(Math.random() * all_bags_img_l)] + '">';    // dodanie grafiki do diva
-        bags.classList.add("bags"); // dodanie klasy bags do diva
-        document.body.appendChild(bags); // dodanie bags do strony\
-        locationX = Math.round((Math.random() * window.innerWidth + 1) - 60); // pozycja w X
+        bags.classList.add("bags"); // add bags class to div
+        document.body.appendChild(bags); // append bagas 
+        locationX = Math.round((Math.random() * window.innerWidth + 1) - 60); // position w X
         if(locationX < 60) locationX = 20;
-        bags.style.left = locationX + "px"; // ustawienie pozycji
+        bags.style.left = locationX + "px"; // set position
     
         // update score on click
         bags.addEventListener("click",function(){

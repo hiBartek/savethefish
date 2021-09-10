@@ -1,15 +1,15 @@
 // var
-let score = 0; // wynik
-let bestScore = 0; // Najlepszy wynik
+let score = 0; // score
+let bestScore = 0; // the best score
 const scoreText = document.getElementById("scoreText"); // score text
 const heart = document.getElementById("heart"); // heart text
 let startHealth = 3; // początkowe zdrowie
-let health = startHealth; // Zdrowie 
-let speedTime = 1500; // czas spawnu
-let live = false; // Czy gra jest rozpoczeta
+let health = startHealth; // health
+let speedTime = 1500; // spwan time
+let live = false; // is game start
 
 // Click fish
-const all_fish = document.querySelectorAll(".fish"); // Wszystkie ryby
+const all_fish = document.querySelectorAll(".fish"); // all fish
 all_fish.forEach(element => {
     element.addEventListener("click", function(){
         health--;
@@ -36,7 +36,7 @@ startgamebtn.addEventListener("click", function(){
     blurbg.classList.add("active");
     scoreText.innerHTML = 0;
     heart.style.display = "block";
-    document.querySelector(".scoreBorder").style.display = "flex"; // Wyświetlenie scoreBorder
+    document.querySelector(".scoreBorder").style.display = "flex"; // Display scoreBorder
 
     // show fish
     document.querySelectorAll(".fish").forEach(element => {
@@ -48,7 +48,7 @@ startgamebtn.addEventListener("click", function(){
         hi.style.display = "none";
         blurbg.style.display = "none";
 
-        spawnBags(); // rozpoczęcie spawn smieci
+        spawnBags(); // start spawn bags
     }, 1000);
 })
 
