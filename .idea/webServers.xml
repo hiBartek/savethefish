@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="fdbda646-37f9-4706-9734-80eba656c3a7" name="SaveTheFish" url="h19.microhost.pl">
+        <fileTransfer rootFolder="/public_html/games/savethefish" host="h19.microhost.pl" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

@@ -86,7 +86,6 @@ setInterval(function(){
             element.addEventListener("click", function(){
                 element.remove();
             });
-
     });
 
     // remove the bags after the animation is over
