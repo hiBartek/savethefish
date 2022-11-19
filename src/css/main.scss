@@ -124,6 +124,7 @@ body{
 
 // score text
 .scoreBorder{
+   pointer-events: none;
    padding: 5px;
    min-width: 50px;
    z-index: 100;
